@@ -128,7 +128,7 @@ const Hero = () => {
 
         {/* Overlay Section */}
         <motion.div
-          className="absolute inset-0 z-40"
+          className="absolute mt-10 inset-0 z-40 h-full w-full"
           initial={{ x: "100%", y: -50, opacity: 0 }}
           animate={showOverlay ? { x: 0, y: 0, opacity: 1 } : { x: "100%", y: -50, opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -233,7 +233,81 @@ const Hero = () => {
       </section>
       <SectionDivider style="slope" height={100} className="-mt-20 z-20" flip={true}/>
 
+        {/* Brand-Styled Section */}
+        <section className="relative bg-white py-20">
+            <SectionDivider style="slope" height={100} className="-mt-20 z-20"/>
+        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            {/* Left Side - Image with Creative Frame */}
+        {/* Left Side - Image with Creative Frame */}
+        {/* Left Side - Image with Creative Frame */}
+        <div className="relative w-fit">
+        {/* Decorative Background Shapes */}
+        <motion.div
+  className="absolute -top-10 -left-10 w-40 h-40 bg-brand-navy/90 rotate-12 z-0"
+  whileHover={{ x: -10, y: -10, rotate: 15 }}
+  transition={{ duration: 0.6, ease: "easeInOut" }}
+></motion.div>
+
+<motion.div
+  className="absolute -top-10 -left-15 w-44 h-40 bg-brand-blue/50 rotate-12 z-1"
+  whileHover={{ x: 10, y: -5, rotate: -8 }}
+  transition={{ duration: 0.6, ease: "easeInOut" }}
+></motion.div>
+
+<motion.div
+  className="absolute -bottom-10 -right-8 w-48 h-48 bg-brand-blue/40 z-0 rounded-full"
+  whileHover={{ x: 10, y: 10, scale: 1.05 }}
+  transition={{ duration: 0.6, ease: "easeInOut" }}
+></motion.div>
+        
+
+        {/* Image with Frame */}
+        <div className="relative overflow-hidden shadow-2xl border-[6px] border-brand-navy  z-10">
+            <img 
+            src="/IMG_0371.JPG" 
+            alt="Insulation Work"
+            className="object-cover transform hover:scale-105 transition duration-700 ease-in-out"
+            />
+        </div>
+        </div>
+
+    {/* Right Side - Text Content */}
+    <div className="text-center md:text-left">
+      <h2 className="text-3xl md:text-4xl font-bold text-brand-navy">
+        Smarter Insulation, <span className="text-brand-blue">Smarter Living</span>
+      </h2>
+      <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+        Don’t just cover your walls — <b>upgrade your lifestyle</b>.  
+        Our insulation services cut down on energy bills, keep your home 
+        <span className="text-brand-blue font-semibold"> cozy in winter</span> 
+        and <span className="text-brand-blue font-semibold">cool in summer</span>, 
+        all while reducing noise and improving air quality.
+      </p>
+      <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+        With <b>state-of-the-art materials</b> and an expert team, 
+        we deliver insulation that pays for itself within a few years — 
+        giving you comfort, savings, and peace of mind.
+      </p>
+
+      {/* Highlight Stats */}
+      <div className="mt-10 grid grid-cols-2 gap-6">
+        <div className="bg-brand-blue/10 border-l-4 border-brand-blue p-6 rounded-lg shadow-md text-center">
+          <h3 className="text-4xl font-bold text-brand-blue">600+</h3>
+          <p className="mt-2 text-lg font-semibold text-brand-navy">Happy Clients</p>
+        </div>
+        <div className="bg-brand-navy/10 border-l-4 border-brand-navy p-6 rounded-lg shadow-md text-center">
+          <h3 className="text-4xl font-bold text-brand-navy">20%</h3>
+          <p className="mt-2 text-lg font-semibold text-brand-navy">Average Energy Saved</p>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+<SectionDivider style="slope" height={100} className="-mt-20 z-20" flip={true}/>
+    </div>
+
+    
   );
 };
 

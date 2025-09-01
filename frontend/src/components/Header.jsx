@@ -5,7 +5,6 @@ import { Phone, Mail, Facebook, Instagram, Twitter, Youtube, Menu, X } from "luc
 const nav = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
-  { to: "/gallery", label: "Gallery" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
