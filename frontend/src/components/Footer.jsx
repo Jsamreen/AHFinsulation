@@ -5,7 +5,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-brand-navy text-gray-300">
+    <footer className="relative z-30 bg-brand-navy text-white py-12">
       {/* Top */}
       <div className="container-xl py-12 grid gap-10 md:grid-cols-3">
         {/* Column 1: Brand + NAP */}
@@ -23,7 +23,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-brand-blue" /> 
-              <a href="tel:+61499535298" className="hover:text-brand-blue">0499 535 298</a>
+              <a href="tel:+610452275255" className="hover:text-brand-blue">0452 275 255</a>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-brand-blue" /> 
@@ -41,8 +41,8 @@ export default function Footer() {
         <div>
           <h4 className="text-base font-semibold mb-3 text-white">Quick Links</h4>
           <ul className="space-y-2 text-sm">
+            <li><Link to="/" className="hover:text-brand-blue">Home</Link></li>
             <li><Link to="/services" className="hover:text-brand-blue">Services</Link></li>
-            <li><Link to="/gallery" className="hover:text-brand-blue">Gallery</Link></li>
             <li><Link to="/about" className="hover:text-brand-blue">About</Link></li>
             <li><Link to="/contact" className="hover:text-brand-blue">Contact</Link></li>
           </ul>

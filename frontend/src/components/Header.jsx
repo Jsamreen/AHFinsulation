@@ -5,7 +5,6 @@ import { Phone, Mail, Facebook, Instagram, Twitter, Youtube, Menu, X } from "luc
 const nav = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
-  { to: "/gallery", label: "Gallery" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
@@ -39,6 +38,17 @@ export default function Header() {
     return () => window.removeEventListener("click", onClick);
   }, [open]);
 
+
+  const [scrolled, setScrolled] = useState(false);
+
+useEffect(() => {
+  const onScroll = () => {
+    setScrolled(window.scrollY > 50);
+  };
+  window.addEventListener("scroll", onScroll);
+  return () => window.removeEventListener("scroll", onScroll);
+}, []);
+
   return (
     <>
       {/* Skip link for screen readers/keyboard */}
@@ -46,14 +56,24 @@ export default function Header() {
         Skip to content
       </a>
 
-      <div className="fixed inset-x-0 top-0 z-50 shadow-header">
-        {/* Top bar */}
-        <div className="bg-brand-navy text-white text-sm" role="region" aria-label="Contact shortcuts">
+      <div
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+          scrolled ? "bg-blue/50 backdrop-blur-md shadow-md" : "bg-white"
+        }`}
+      >
+      {/* Top bar */}
+        <div
+            className={`${
+              scrolled ? "bg-brand-navy/50 backdrop-blur-md" : "bg-brand-navy"
+            } text-white text-sm transition-colors duration-300`}
+            role="region"
+            aria-label="Contact shortcuts"
+          >
           <div className="container-xl h-10 flex items-center justify-between">
             <div className="flex items-center gap-6">
-              <a href="tel:+61499535298" className="hover:text-brand-blue flex items-center gap-2">
+              <a href="tel:+610452275255" className="hover:text-brand-blue flex items-center gap-2">
                 <Phone className="w-5 h-5 text-brand-blue" aria-hidden="true" />
-                <span className="whitespace-nowrap">0499 535 298</span>
+                <span className="whitespace-nowrap">0452 275 255</span>
               </a>
               <a href="mailto:info@ahfinsulation.com" className="hover:text-brand-blue flex items-center gap-2">
                 <Mail className="w-5 h-5 text-brand-blue" aria-hidden="true" />
@@ -70,7 +90,11 @@ export default function Header() {
         </div>
 
         {/* Main bar */}
-        <div className="bg-brand-mist">
+        <div
+          className={`${
+            scrolled ? "bg-brand-white/40 backdrop-blur-md shadow-md" : "bg-brand-mist"
+          } transition-colors duration-300`}
+        >
           <div className="container-xl h-20 flex items-center justify-between" role="navigation" aria-label="Primary">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3" aria-label="AHF Insulation home">
@@ -130,7 +154,7 @@ export default function Header() {
       </div>
 
       {/* Spacer for fixed header */}
-      <div className="h-[130px] md:h-[150px]" aria-hidden="true" />
+      <div className="h-[100px] md:h-[120px]" aria-hidden="true" />
     </>
   );
 }
