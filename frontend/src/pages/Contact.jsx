@@ -12,8 +12,9 @@ export default function Contact() {
     phone: "",
     service: "",
     budget: "",
+    suburb: "",
     message: "",
-    company: "",       // honeypot
+    company: "",       // Honeypot field
     consent: false,
   });
 
@@ -47,28 +48,41 @@ export default function Contact() {
     }
 
     setLoading(true);
+    try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
 
-    // ---- Replace this with your API / Email service / Netlify form, etc.
-    // Simulate async submit
-    setTimeout(() => {
-      setLoading(false);
-      setStatus({
-        type: "success",
-        message: "Thanks! Your message has been sent. We’ll get back to you shortly.",
-      });
-      setForm({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        budget: "",
-        message: "",
-        company: "",
-        consent: false,
-      });
-    }, 1000);
-  };
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data.ok) {
+      throw new Error(data.error || "Failed to send");
+    }
 
+    setStatus({
+      type: "success",
+      message: "Thanks! Your message has been sent. We’ll get back to you shortly.",
+    });
+
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      budget: "",
+      suburb: "",
+      message: "",
+      company: "",
+      consent: false,
+    });
+  } catch (err) {
+    setStatus({ type: "error", message: err.message || "Something went wrong" });
+  } finally {
+    setLoading(false);
+  }
+};
+   
   return (
     <div className="w-full">
       {/* HERO */}
@@ -300,7 +314,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Map (replace src with your own place link if desired) */}
+              {/* Map */}
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <div className="aspect-[16/9] bg-white">
                   <iframe

@@ -71,9 +71,9 @@ useEffect(() => {
           >
           <div className="container-xl h-10 flex items-center justify-between">
             <div className="flex items-center gap-6">
-              <a href="tel:+61499535298" className="hover:text-brand-blue flex items-center gap-2">
+              <a href="tel:+610452275255" className="hover:text-brand-blue flex items-center gap-2">
                 <Phone className="w-5 h-5 text-brand-blue" aria-hidden="true" />
-                <span className="whitespace-nowrap">0499 535 298</span>
+                <span className="whitespace-nowrap">0452 275 255</span>
               </a>
               <a href="mailto:info@ahfinsulation.com" className="hover:text-brand-blue flex items-center gap-2">
                 <Mail className="w-5 h-5 text-brand-blue" aria-hidden="true" />
