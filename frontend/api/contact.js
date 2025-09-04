@@ -1,5 +1,7 @@
 // frontend/api/contact.js
 import nodemailer from "nodemailer";
+export const config = { runtime: "nodejs22.x" };
+
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).end();
