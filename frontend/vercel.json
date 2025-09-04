@@ -1,0 +1,5 @@
+{
+  "functions": {
+    "api/**/*.js": { "runtime": "@vercel/nodejs22.x" }
+  }
+}
