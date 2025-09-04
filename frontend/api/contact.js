@@ -2,6 +2,10 @@
 import nodemailer from "nodemailer";
 export const config = { runtime: "nodejs22.x" };
 
+export default async function handler(req, res) {
+  if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method Not Allowed" });
+  return res.json({ ok: true, msg: "contact endpoint is alive" });
+}
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).end();
@@ -16,7 +20,7 @@ export default async function handler(req, res) {
     // Honeypot + validation (mirrors your frontend)
     if (company) return res.json({ ok: true }); // silently drop bots
     if (!name?.trim() || !email?.trim() || !phone?.trim() || !message?.trim() || !consent) {
-      return res.status(400).json({ ok: false, error: "Missing required fields" });
+      return res.status(400).json({ ok: false, error: "Missing required fields" }); 
     }
     if (message.length > 1200) {
       return res.status(400).json({ ok: false, error: "Message too long" });
