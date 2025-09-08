@@ -113,15 +113,17 @@ const Services = () => {
       {/* ---------------- SERVICES GRID ---------------- */}
       <section className="py-24 bg-brand-mist relative z-10">
         <motion.div
-          className="absolute -top-10 -left-15 w-44 h-40 bg-brand-blue/50 rotate-12 z-1"
+          className="absolute -top-10 -left-8 size-24 md:size-40 bg-brand-blue/50 rotate-12 z-[1] pointer-events-none"
           whileHover={{ x: 10, y: -5, rotate: -8 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-        ></motion.div>
+        />
+
         <motion.div
-          className="absolute -top-14 -left-10 w-44 h-40 bg-brand-navy/50 rotate-13 z-1"
+          className="absolute -top-14 -left-6 size-20 md:size-36 bg-brand-navy/50 rotate-13 z-[1] pointer-events-none"
           whileHover={{ x: 10, y: -5, rotate: -8 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-        ></motion.div>
+        />
+
 
         <div className="container mx-auto px-6">
           <motion.h2

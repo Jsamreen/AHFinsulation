@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import { Phone, Mail, Facebook, Instagram, Twitter, Youtube, Menu, X } from "lucide-react";
+import { Phone, Mail, Facebook, Instagram, Linkedin, Menu, X } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -8,6 +8,12 @@ const nav = [
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
+
+const SOCIAL = {
+  instagram: "https://www.instagram.com/ahfinsulation?igsh=MXd3NDZia29nOXdsbw==",
+  facebook:  "https://www.facebook.com/share/1LZFP6os7c/?mibextid=wwXIfr",
+  linkedin:  "https://www.linkedin.com/in/ahf-insulation-2329111ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+};
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -82,11 +88,18 @@ export default function Header() {
                 <span>info@ahfinsulation.com</span>
               </a>
             </div>
+
+            {/* Social links */}
             <div className="hidden md:flex items-center gap-3" aria-label="Social links">
-              <a href="#" aria-label="Facebook" className="icon-chip"><Facebook className="w-5 h-5" aria-hidden="true" /></a>
-              <a href="#" aria-label="Instagram" className="icon-chip"><Instagram className="w-5 h-5" aria-hidden="true" /></a>
-              <a href="#" aria-label="Twitter / X" className="icon-chip"><Twitter className="w-5 h-5" aria-hidden="true" /></a>
-              <a href="#" aria-label="YouTube" className="icon-chip"><Youtube className="w-5 h-5" aria-hidden="true" /></a>
+              <a href={SOCIAL.facebook}  target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="icon-chip">
+                <Facebook className="w-5 h-5" aria-hidden="true" />
+              </a>
+              <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="icon-chip">
+                <Instagram className="w-5 h-5" aria-hidden="true" />
+              </a>
+              <a href={SOCIAL.linkedin}  target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="icon-chip">
+                <Linkedin className="w-5 h-5" aria-hidden="true" />
+              </a>
             </div>
           </div>
         </div>

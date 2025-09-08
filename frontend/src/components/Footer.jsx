@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin} from "lucide-react";
+
+const SOCIAL = {
+  instagram: "https://www.instagram.com/ahfinsulation?igsh=MXd3NDZia29nOXdsbw==",
+  facebook:  "https://www.facebook.com/share/1LZFP6os7c/?mibextid=wwXIfr",
+  linkedin:  "https://www.linkedin.com/in/ahf-insulation-2329111ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+};
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -18,22 +24,21 @@ export default function Footer() {
           </p>
           <ul className="space-y-2 text-sm">
             <li className="flex items-start gap-2">
-              <MapPin className="w-4 h-4 text-brand-blue mt-0.5" /> 
+              <MapPin className="w-4 h-4 text-brand-blue mt-0.5" />
               <span className="hover:text-brand-blue">Unit 19, 2 Fastline Dr, Truganina VIC 3029</span>
             </li>
             <li className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-brand-blue" /> 
+              <Phone className="w-4 h-4 text-brand-blue" />
               <a href="tel:+610452275255" className="hover:text-brand-blue">0452 275 255</a>
             </li>
             <li className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-brand-blue" /> 
+              <Mail className="w-4 h-4 text-brand-blue" />
               <a href="mailto:info@ahfinsulation.com" className="hover:text-brand-blue">info@ahfinsulation.com</a>
             </li>
             <li className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-brand-blue" />
-            <span className="hover:text-brand-blue">Mon–Sat: 6am–6pm</span>
+              <Clock className="w-4 h-4 text-brand-blue" />
+              <span className="hover:text-brand-blue">Mon–Sat: 6am–6pm</span>
             </li>
-
           </ul>
         </div>
 
@@ -50,7 +55,7 @@ export default function Footer() {
 
         {/* Column 3: CTA */}
         <div className="flex flex-col gap-3">
-          <h4 className="text-base font-semibold mb-2 text-white">Get a Free Quote</h4>
+          <h4 className="text-base font-bold mb-3 text-white">Get a Quote</h4>
           <Link to="/contact" className="btn-blue w-fit">Contact Us</Link>
         </div>
       </div>
@@ -62,10 +67,9 @@ export default function Footer() {
             © {year} AHF Insulation Pty Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-3">
-            <a href="#" aria-label="Facebook" className="icon-chip hover:text-brand-blue"><Facebook className="w-4 h-4" /></a>
-            <a href="#" aria-label="Instagram" className="icon-chip hover:text-brand-blue"><Instagram className="w-4 h-4" /></a>
-            <a href="#" aria-label="Twitter/X" className="icon-chip hover:text-brand-blue"><Twitter className="w-4 h-4" /></a>
-            <a href="#" aria-label="YouTube" className="icon-chip hover:text-brand-blue"><Youtube className="w-4 h-4" /></a>
+            <a href={SOCIAL.facebook}  target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="icon-chip hover:text-brand-blue"><Facebook className="w-4 h-4" /></a>
+            <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="icon-chip hover:text-brand-blue"><Instagram className="w-4 h-4" /></a>
+            <a href={SOCIAL.linkedin}  target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="icon-chip hover:text-brand-blue"><Linkedin className="w-4 h-4" /></a>
           </div>
         </div>
       </div>
