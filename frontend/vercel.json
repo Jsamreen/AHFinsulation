@@ -1,5 +1,0 @@
-{
-  "functions": {
-    "api/**/*.js": { "runtime": "now-nodejs@22.x" }
-  }
-}
