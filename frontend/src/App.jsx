@@ -5,7 +5,7 @@ import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 
 import Home from "./pages/Home.jsx";
-import Services from "./pages/services.jsx";
+import Services from "./pages/Services.jsx";
 import Privacy from "./pages/Privacy.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
