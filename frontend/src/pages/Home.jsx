@@ -58,7 +58,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full cursor-default">
       {/* Hero Slider */}
       <div className="h-[90vh] relative">
         <div className="fixed inset-0 h-[90vh] w-full z-0">
@@ -123,7 +123,7 @@ const Hero = () => {
           onClick={() => setShowOverlay(!showOverlay)}
           className="absolute top-1/2 right-6 transform -translate-y-1/2 bg-white/50 hover:bg-white/50 p-3 rounded-full shadow-lg transition z-50 "
         >
-          <ChevronLeft className="w-7 h-7 text-white" />
+          <ChevronRight className="w-7 h-7 text-white" />
         </button>
 
         {/* Overlay Section */}
@@ -190,7 +190,7 @@ const Hero = () => {
               <motion.div
                 key={index}
                 className="group relative bg-white rounded-2xl p-8 flex flex-col items-center text-center
-                           shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                           shadow-md hover:shadow-2xl transition-all duration-500 cursor-default"
                 initial={{ opacity: 0, y: 80, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ delay: index * 0.15, type: "spring", stiffness: 100 }}
