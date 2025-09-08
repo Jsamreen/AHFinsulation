@@ -244,23 +244,16 @@ const Hero = () => {
         <div className="relative w-fit">
         {/* Decorative Background Shapes */}
         <motion.div
-  className="absolute -top-10 -left-10 w-40 h-40 bg-brand-navy/90 rotate-12 z-0"
-  whileHover={{ x: -10, y: -10, rotate: 15 }}
-  transition={{ duration: 0.6, ease: "easeInOut" }}
-></motion.div>
+          className="absolute -top-10 -left-10 w-40 h-40 bg-brand-navy/90 rotate-12 z-0"
+          whileHover={{ x: -10, y: -10, rotate: 15 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+        ></motion.div>
 
-<motion.div
-  className="absolute -top-10 -left-15 w-44 h-40 bg-brand-blue/50 rotate-12 z-1"
-  whileHover={{ x: 10, y: -5, rotate: -8 }}
-  transition={{ duration: 0.6, ease: "easeInOut" }}
-></motion.div>
-
-<motion.div
-  className="absolute -bottom-10 -right-8 w-48 h-48 bg-brand-blue/40 z-0 rounded-full"
-  whileHover={{ x: 10, y: 10, scale: 1.05 }}
-  transition={{ duration: 0.6, ease: "easeInOut" }}
-></motion.div>
-        
+        <motion.div
+          className="absolute -top-10 -left-15 w-44 h-40 bg-brand-blue/50 rotate-12 z-1"
+          whileHover={{ x: 10, y: -5, rotate: -8 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+        ></motion.div>
 
         {/* Image with Frame */}
         <div className="relative overflow-hidden shadow-2xl border-[6px] border-brand-navy  z-10">

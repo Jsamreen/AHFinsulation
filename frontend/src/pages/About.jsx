@@ -70,7 +70,7 @@ export default function About() {
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link to="/contact" className="btn-blue">
-                Get a Free Quote
+                Get a Quote
               </Link>
               <a href="tel:+61452275255" className="text-white/80 hover:text-white underline">
                 Call 0452 275 255
@@ -167,7 +167,7 @@ export default function About() {
           {/* Quick stats band */}
           <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { k: "Founded", v: "2021" },
+              { k: "Founded", v: "2010" },
               { k: "Base", v: "Truganina, VIC" },
               { k: "Focus", v: "Residential & Commercial" },
               { k: "Phone", v: "0452 275 255" },
