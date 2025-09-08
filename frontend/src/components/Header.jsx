@@ -4,6 +4,7 @@ import { Phone, Mail, Facebook, Instagram, Linkedin, Menu, X } from "lucide-reac
 
 const nav = [
   { to: "/", label: "Home" },
+  { to: "/gallery", label: "Gallery" },
   { to: "/services", label: "Services" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
