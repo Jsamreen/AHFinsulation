@@ -292,7 +292,7 @@ export default function Contact() {
                     <InfoRow
                       icon={<Phone className="w-5 h-5 text-brand-blue" />}
                       label="Phone"
-                      value={<a href="tel:+61452275255" className="hover:underline">0452 275 255</a>}
+                      value={<a href="tel:0499 535 298" className="hover:underline">0499 535 298</a>}
                     />
                     <InfoRow
                       icon={<Mail className="w-5 h-5 text-brand-blue" />}

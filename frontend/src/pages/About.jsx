@@ -72,8 +72,8 @@ export default function About() {
               <Link to="/contact" className="btn-blue">
                 Get a Quote
               </Link>
-              <a href="tel:+61452275255" className="text-white/80 hover:text-white underline">
-                Call 0452 275 255
+              <a href="tel:+610499535298" className="text-white/80 hover:text-white underline">
+                Call 0499 535 298
               </a>
             </div>
           </motion.div>
@@ -170,7 +170,7 @@ export default function About() {
               { k: "Founded", v: "2010" },
               { k: "Base", v: "Truganina, VIC" },
               { k: "Focus", v: "Residential & Commercial" },
-              { k: "Phone", v: "0452 275 255" },
+              { k: "Phone", v: "0499 535 298" },
             ].map((s, i) => (
               <motion.div
                 key={i}
