@@ -4,19 +4,30 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, PlayCircle, X } from "lucide-react";
 
 
-/** ----------------------------------------------------------------
- * Add your files in /public/media/gallery and list them here.
- * type: "image" | "video"
- * poster: optional poster image for videos (recommended)
- * ---------------------------------------------------------------- */
 const MEDIA = [
   // HERO — these appear in the slider
+  {
+    id: "IMG2",
+    type: "image",
+    src: "/media/gallery/IMG2.jpg",
+    short: "Wrap & batts — envelope",
+    hero: true,
+    tags: ["wrap", "new-build", "envelope"],
+  },
+  {
+    id: "IMG-20250908-WA0024",
+    type: "image",
+    src: "/media/gallery/IMG-20250908-WA0024.jpg",
+    short: "Façade wrap & tapes",
+    hero: true,
+    tags: ["new-build", "wrap", "envelope"],
+  },
+  
   {
     id: "IMG-20250908-WA0046",
     type: "image",
     src: "/media/gallery/IMG-20250908-WA0046.jpg",
     short: "Façade wrap & tapes",
-    alt: "External wall wrap and tapes installed to the façade — weather barrier ready for cladding.",
     hero: true,
     tags: ["new-build", "wrap", "envelope"],
   },
@@ -25,34 +36,92 @@ const MEDIA = [
     type: "image",
     src: "/media/gallery/IMG-20250908-WA0052.jpg",
     short: "Windows wrapped & sealed",
-    alt: "Wall wrap neatly detailed around window openings with sill pans and tapes for a weather-tight seal.",
     hero: true,
     tags: ["new-build", "wrap", "windows"],
   },
+  {
+    id: "IMG33",
+    type: "image",
+    src: "/media/gallery/IMG33.jpg",
+    short: "Façade wrap & tapes",
+    hero: true,
+    tags: ["new-build", "wrap", "envelope"],
+  },
+  {
+    id: "IMG-20250908-WA0026",
+    type: "image",
+    src: "/media/gallery/IMG-20250908-WA0026.jpg",
+    short: "Façade wrap & tapes",
+    hero: true,
+    tags: ["new-build", "wrap", "envelope"],
+  },
+  
+{
+    id: "IMG-20250908-WA0061",
+    type: "image",
+    src: "/media/gallery/IMG-20250908-WA0061.jpg",
+    short: "Façade wrap & tapes",
+    hero: true,
+    tags: ["new-build", "wrap", "envelope"],
+  },
+  
   {
     id: "IMG-20250908-WA0064",
     type: "image",
     src: "/media/gallery/IMG-20250908-WA0064.jpg",
     short: "Upper-storey wrap",
-    alt: "Continuous wall wrap to the upper storey, tensioned and taped for consistent coverage.",
     hero: true,
     tags: ["new-build", "wrap", "upper-storey"],
   },
+    
+  {
+    id: "IMG-20250908-WA0063",
+    type: "image",
+    src: "/media/gallery/IMG-20250908-WA0063.jpg",
+    short: "Façade wrap & tapes",
+    hero: true,
+    tags: ["new-build", "wrap", "envelope"],
+  },
+  {
+    id: "IMG-20250908-WA0027",
+    type: "image",
+    src: "/media/gallery/IMG-20250908-WA0027.jpg",
+    short: "Façade wrap & tapes",
+    hero: true,
+    tags: ["new-build", "wrap", "envelope"],
+  },
+  
   {
     id: "IMG-20250908-WA0083",
     type: "image",
     src: "/media/gallery/IMG-20250908-WA0083.jpg",
     short: "Façade detailing",
-    alt: "Façade wrap integrated with window flashings and taped penetrations for durable weatherproofing.",
     hero: true,
     tags: ["new-build", "wrap", "flashing"],
+  },
+    
+  {
+    id: "IMG-20250908-WA0068",
+    type: "image",
+    src: "/media/gallery/IMG-20250908-WA0068.jpg",
+    short: "Façade wrap & tapes",
+    hero: true,
+    tags: ["new-build", "wrap", "envelope"],
+  },
+    
+  {
+    id: "IMG-20250908-WA0069",
+    type: "image",
+    src: "/media/gallery/IMG-20250908-WA0069.jpg",
+    short: "Façade wrap & tapes",
+    hero: true,
+    tags: ["new-build", "wrap", "envelope"],
   },
   {
     id: "IMG-20250908-WA0086",
     type: "image",
     src: "/media/gallery/IMG-20250908-WA0086.jpg",
     short: "Wrap — penetrations sealed",
-    alt: "External wall wrap with services penetrations sealed and taped to maintain the air and weather barrier.",
     hero: true,
     tags: ["new-build", "wrap", "services"],
   },
@@ -61,7 +130,6 @@ const MEDIA = [
     type: "image",
     src: "/media/gallery/IMG-20250908-WA0093.jpg",
     short: "Townhouse row — wrap",
-    alt: "Row of townhouses wrapped with AHF Insulation barrier for a continuous external envelope.",
     hero: true,
     tags: ["new-build", "wrap", "multi-dwelling"],
   },
@@ -70,7 +138,6 @@ const MEDIA = [
     type: "image",
     src: "/media/gallery/IMG-20250908-WA0095.jpg",
     short: "Corner elevation — wrap",
-    alt: "Tensioned wrap and taped laps around a corner elevation, ready for cladding.",
     hero: true,
     tags: ["new-build", "wrap", "envelope"],
   },
@@ -79,7 +146,6 @@ const MEDIA = [
     type: "image",
     src: "/media/gallery/IMG-20250908-WA0072.jpg",
     short: "Wrap & batten stage",
-    alt: "External wrap in place with framing and battens — building envelope progressing to cladding.",
     hero: true,
     tags: ["new-build", "wrap", "batten"],
   },
@@ -88,7 +154,6 @@ const MEDIA = [
     type: "image",
     src: "/media/gallery/IMG-20250908-WA0023.jpg",
     short: "Façade progress",
-    alt: "Site progress shot showing wrapped façades and scaffold — envelope protected from weather.",
     hero: true,
     tags: ["new-build", "wrap", "progress"],
   },
@@ -97,69 +162,155 @@ const MEDIA = [
     type: "image",
     src: "/media/gallery/IMG-20250908-WA0056.jpg",
     short: "Acoustic wall batts — media room",
-    alt: "Acoustic wall batts installed in a media room to reduce noise transfer between spaces.",
     hero: true,
     tags: ["acoustic", "walls", "media-room"],
   },
 
   // GRID — the rest of the gallery
   {
-    id: "IMG-20250908-WA0021",
-    type: "image",
-    src: "/media/gallery/IMG-20250908-WA0021.jpg",
-    short: "Old insulation removal — roof space",
-    alt: "Safe removal and bagging of old roof insulation prior to vacuum clean and new batts installation.",
-    tags: ["removal", "roof", "residential"],
+  id: "IMG-20250908-WA0021",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0021.jpg",
+  short: "Underfloor foilboard installation",
+  alt: "ThermaFloor foilboard panels neatly fitted between joists for underfloor insulation at a residential site.",
+  tags: ["underfloor", "foilboard", "residential"],
   },
   {
-    id: "IMG-20250908-WA0028",
-    type: "image",
-    src: "/media/gallery/IMG-20250908-WA0028.jpg",
-    short: "Thermal wall batts — renovation",
-    alt: "R2.7 thermal wall batts installed during renovation to boost comfort and energy efficiency.",
-    tags: ["walls", "renovation", "residential"],
+  id: "IMG-20250908-WA0062",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0062.jpg",
+  short: "Wall wrap installation",
+  alt: "Protective wall wrap installed on external framing to act as a weather barrier and improve building insulation performance.",
+  tags: ["wrap", "wall", "new-build", "residential"],
   },
-  // {
-  //   id: "ahfsite1-video",
-  //   type: "video",
-  //   src: "/media/gallery/ahfsite1.mp4",
-  //   poster: "/media/gallery/roof-clean-poster.jpg",
-  //   short: "Timelapse — roof clean & prep",
-  //   alt: "Timelapse of roof space clean-up before installing new ceiling batts.",
-  //   tags: ["removal", "timelapse"],
-  // },
   {
-    id: "IMG-20250908-WA0044",
+  id: "IMG-20250908-WA0076",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0076.jpg",
+  short: "Branded wall wrap installation",
+  alt: "AHF Insulation branded wall wrap securely installed on upper level external framing for weather protection and insulation performance.",
+  tags: ["wrap", "wall", "branding", "new-build", "residential"],
+  },
+  {
+  id: "IMG-20250908-WA0028",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0028.jpg",
+  short: "Wall & ceiling batts installation",
+  alt: "Full coverage of thermal and acoustic batts installed in walls and ceiling framing of a new residential build.",
+  tags: ["walls", "ceiling", "batts", "new-build", "residential"],
+ },
+  {
+  id: "IMG-20250908-WA0044",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0044.jpg",
+  short: "Underfloor polyester insulation",
+  alt: "Polyester underfloor insulation laid snugly between joists to improve thermal efficiency and comfort in a residential home.",
+  tags: ["underfloor", "polyester", "residential"],
+},
+  {
+    id: "IMG-20250908-WA0085",
     type: "image",
-    src: "/media/gallery/IMG-20250908-WA0044.jpg",
+    src: "/media/gallery/IMG-20250908-WA0085.jpg",
     short: "Mineral wool — garage boundary",
     alt: "Non-combustible mineral wool installed to the garage boundary wall in line with NCC fire separation.",
     tags: ["fire-resistant", "garage", "ncc"],
   },
   {
-    id: "IMG-20250908-WA0050",
-    type: "image",
-    src: "/media/gallery/IMG-20250908-WA0050.jpg",
-    short: "Wall wrap & batts — new build",
-    alt: "External wall wrap and thermal wall batts installed as part of a full building envelope package.",
-    tags: ["wrap", "new-build", "walls"],
+  id: "IMG-20250908-WA0074",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0074.jpg",
+  short: "Upper level wall wrap installation",
+  alt: "AHF Insulation branded white wall wrap installed on the upper level of a residential build, providing a weather barrier and insulation support.",
+  tags: ["wrap", "wall", "new-build", "residential"],
+  },
+
+  {
+  id: "IMG-20250908-WA0066",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0066.jpg",
+  short: "Blue external wall wrap",
+  alt: "Blue Solitex external wall wrap installed with sealed joints to provide a weather-tight barrier and enhance insulation performance.",
+  tags: ["wrap", "wall", "blue", "new-build", "residential"],
   },
   {
-    id: "IMG-20250908-WA0048",
-    type: "image",
-    src: "/media/gallery/IMG-20250908-WA0048.jpg",
-    short: "Mineral wool — fire-rated wall",
-    alt: "Fire-rated mineral wool infill to boundary wall achieving FRL compliance for adjoining structures.",
-    tags: ["fire-rated", "garage", "ncc"],
+  id: "IMG-20250908-WA0050",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0050.jpg",
+  short: "Cathedral ceiling & wall batts",
+  alt: "Thermal and acoustic batts installed in cathedral ceiling and wall framing of a new residential build for improved comfort and energy efficiency.",
+  tags: ["ceiling", "walls", "batts", "new-build", "residential"],
+  },
+  
+  {
+  id: "IMG-20250908-WA0048",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0048.jpg",
+  short: "Blue wall wrap on townhouse build",
+  alt: "AHF Insulation branded blue wall wrap applied across a multi-unit townhouse project, providing weather protection and insulation performance.",
+  tags: ["wrap", "wall", "blue", "new-build", "residential"],
+  },
+
+  {
+  id: "IMG-20250908-WA0072",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0072.jpg",
+  short: "White wall wrap on steel frame build",
+  alt: "AHF Insulation branded white wall wrap installed on a steel frame residential project, providing weatherproofing and insulation support.",
+  tags: ["wrap", "wall", "white", "new-build", "residential"],
+  },
+
+  {
+  id: "IMG11",
+  type: "image",
+  src: "/media/gallery/IMG11.jpg",
+  short: "Blue Solitex wall wrap install",
+  alt: "Blue Solitex wall wrap fitted and taped to timber framing, providing a weather-tight seal and enhancing insulation performance in a new residential build.",
+  tags: ["wrap", "wall", "blue", "new-build", "residential"],
   },
   {
-    id: "IMG-20250908-WA0072",
-    type: "image",
-    src: "/media/gallery/IMG-20250908-WA0072.jpg",
-    short: "Wrap & batts — envelope",
-    alt: "Wall wrap and thermal batts working together to improve the building’s thermal envelope.",
-    tags: ["wrap", "new-build", "envelope"],
+  id: "IMG-20250908-WA0071",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0071.jpg",
+  short: "White wall wrap on steel frame build",
+  alt: "AHF Insulation branded white wall wrap installed on a steel frame residential structure, providing weatherproofing and insulation support.",
+  tags: ["wrap", "wall", "white", "steel-frame", "new-build", "residential"],
   },
+
+ {
+  id: "IMG-20250908-WA0087",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0087.jpg",
+  short: "Blue wall wrap with window detailing",
+  alt: "AHF Insulation branded blue wall wrap installed with precise detailing around window openings for a weather-tight and energy-efficient seal.",
+  tags: ["wrap", "wall", "blue", "new-build", "residential"],
+},
+
+  {
+  id: "IMG-20250908-WA0089",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0089.jpg",
+  short: "Upper level blue wall wrap",
+  alt: "AHF Insulation branded blue wall wrap installed on the upper level of a residential build, with detailed sealing around window frames for weather protection and insulation performance.",
+  tags: ["wrap", "wall", "blue", "upper-level", "new-build", "residential"],
+  },
+ 
+  {
+  id: "IMG-20250908-WA0091",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0091.jpg",
+  short: "Blue wall wrap with window seal",
+  alt: "AHF Insulation branded blue wall wrap carefully detailed and sealed around window frames to ensure weatherproofing and energy efficiency in a new residential build.",
+  tags: ["wrap", "wall", "blue", "window-detailing", "new-build", "residential"],
+  },
+  {
+  id: "IMG-20250908-WA0094",
+  type: "image",
+  src: "/media/gallery/IMG-20250908-WA0094.jpg",
+  short: "Blue wall wrap on upper level",
+  alt: "AHF Insulation branded blue wall wrap installed on the upper level external walls, with clean detailing around window frames for a weather-tight finish.",
+  tags: ["wrap", "wall", "blue", "upper-level", "window-detailing", "new-build", "residential"],
+},
+
 ];
 
 
@@ -375,7 +526,7 @@ function HeroSlider({ items, onOpen }) {
         ))}
       </div>
 
-      {/* Progress bar (brand colors) */}
+      {/* Progress bar*/}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10 overflow-hidden">
         {/** Key changes on slide, retriggering animation */}
         <motion.div
