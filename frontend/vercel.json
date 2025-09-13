@@ -1,8 +1,6 @@
 {
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(sitemap\\.xml|robots\\.txt|favicon\\.ico)", "dest": "/$1" },
-    { "src": "/.*", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "cleanUrls": true,
   "trailingSlash": false
