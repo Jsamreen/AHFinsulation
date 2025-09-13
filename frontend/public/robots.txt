@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ahfinsulation.com/sitemap.xml
+Sitemap: https://www.ahfinsulation.com/sitemap.xml
