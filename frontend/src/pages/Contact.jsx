@@ -86,10 +86,10 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact AHF Insulation | Free Quotes in Melbourne</title>
+        <title>Contact AHF Insulation | Professional Insulation Services in Melbourne</title>
         <meta
           name="description"
-          content="Get a free quote for insulation in Melbourne. Call 0499 535 298 or email info@ahfinsulation.com. Fast responses and professional service."
+          content="Get a quote for insulation in Melbourne. Call 0499 535 298 or email info@ahfinsulation.com. Fast responses and professional service."
         />
         <link rel="canonical" href="https://www.ahfinsulation.com/contact" />
 
@@ -98,7 +98,7 @@ export default function Contact() {
         <meta property="og:description" content="Call 0499 535 298 or email info@ahfinsulation.com for fast quotes and bookings." />
         <meta property="og:url" content="https://www.ahfinsulation.com/contact" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.ahfinsulation.com/og/contact-hero.jpg" />
+        <meta property="og:image" content="https://www.ahfinsulation.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 

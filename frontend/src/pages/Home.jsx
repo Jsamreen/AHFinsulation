@@ -18,7 +18,7 @@ const Hero = () => {
   ];
 
   const services = [
-    { icon: <Hammer className="w-10 h-10 text-brand-blue" />, title: "Insulation Supply & Install", desc: "Complete solutions for residential and commercial insulation." },
+    { icon: <Hammer className="w-10 h-10 text-brand-blue" />, title: "Professional Insulation Services", desc: "Complete solutions for residential and commercial insulation." },
     { icon: <Home className="w-10 h-10 text-brand-blue" />, title: "Wall Wrap & Insulation Batts", desc: "Energy-efficient wall wraps and batts for maximum comfort." },
     { icon: <Wrench className="w-10 h-10 text-brand-blue" />, title: "Old Insulation Removal", desc: "Safe removal and disposal of old or damaged insulation." },
     { icon: <Building2 className="w-10 h-10 text-brand-blue" />, title: "Commercial & Residential", desc: "Trusted by homeowners and builders across Melbourne." }
@@ -60,42 +60,66 @@ const Hero = () => {
 
   return (
     <>
-    {/* 🔽 SEO: Home meta */}
-      <Helmet>
-        <title>AHF Insulation | Expert Insulation Services in Melbourne</title>
-        <meta
-          name="description"
-          content="We provide professional insulation services in Melbourne. Improve energy efficiency, reduce bills, and keep your home comfortable. Call 0499 535 298 for a free quote."
-        />
-        <link rel="canonical" href="https://www.ahfinsulation.com/" />
-        <meta property="og:title" content="AHF Insulation | Melbourne Insulation Specialists" />
-        <meta property="og:description" content="Expert wall, ceiling, and wrap insulation across Melbourne." />
-        <meta property="og:url" content="https://www.ahfinsulation.com/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.ahfinsulation.com/media/gallery/IMG-20250908-WA0079.jpg" />
+    <Helmet>
+  {/* Canonical + primary SEO */}
+  <title>AHF Insulation |  Professional Insulation  Services | Melbourne (15+ Years)</title>
+  <meta
+    name="description"
+    content="Trusted insulation specialists in Melbourne - Install of wall/ceiling batts, wall wrap, and safe old insulation removal. 15+ years experience. Call 0499 535 298 for a quote."
+  />
+  <link rel="canonical" href="https://www.ahfinsulation.com/" />
 
-        <script type="application/ld+json">
-        {`{
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "AHF Insulation",
-          "image": "https://www.ahfinsulation.com/og/home-hero.jpg",
-          "url": "https://www.ahfinsulation.com/",
-          "telephone": "+61 499 535 298",
-          "areaServed": "Melbourne, Australia",
-          "priceRange": "$$",
-          "email": "info@ahfinsulation.com",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Melbourne",
-            "addressRegion": "VIC",
-            "addressCountry": "AU"
-          },
-          "sameAs": []
-        }`}
-        </script>
+  {/* Open Graph / Social */}
+  <meta property="og:title" content="AHF Insulation | Melbourne Insulation Specialists" />
+  <meta property="og:description" content="Professional Insulation Services - install, wall wrap, and old insulation removal across Melbourne." />
+  <meta property="og:url" content="https://www.ahfinsulation.com/" />
+  <meta property="og:type" content="website" />
 
-      </Helmet>
+  <meta property="og:image" content="https://www.ahfinsulation.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "AHF Insulation",
+      "image": "https://www.ahfinsulation.com/og-image.jpg",
+      "url": "https://www.ahfinsulation.com/",
+      "telephone": "+61 499 535 298",
+      "email": "info@ahfinsulation.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Unit 19, 2 Fastline Dr",
+        "addressLocality": "Truganina",
+        "addressRegion": "VIC",
+        "postalCode": "3029",
+        "addressCountry": "AU"
+      },
+      "areaServed": "Melbourne VIC",
+      "sameAs": [],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.ahfinsulation.com/"
+      }
+    })}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AHF Insulation",
+      "url": "https://www.ahfinsulation.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.ahfinsulation.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    })}
+  </script>
+</Helmet>
+
     <div className="relative w-full cursor-default">
       {/* Hero Slider */}
       <div className="h-[90vh] relative">

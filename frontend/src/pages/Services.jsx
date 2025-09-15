@@ -54,7 +54,7 @@ const Services = () => {
   const process = [
     {
       step: "Step 1",
-      title: "Free Consultation",
+      title: "Consultation",
       desc: "Our experts visit your home or site, inspect, and provide tailored insulation advice.",
       icon: <ClipboardCheck className="w-8 h-8 text-brand-blue" />,
     },
@@ -84,7 +84,7 @@ const Services = () => {
         <title> AHF Services | Residential & Commercial | AHF Insulation</title>
         <meta
           name="description"
-          content="Wall, ceiling and wrap insulation supply & install across Melbourne. Safe old insulation removal, clean installs, builder-friendly scheduling."
+          content="Wall, ceiling and wrap insulation services across Melbourne. Safe old insulation removal, clean installs, builder-friendly scheduling."
         />
         <link rel="canonical" href="https://www.ahfinsulation.com/services" />
 
@@ -102,7 +102,7 @@ const Services = () => {
           {`{
             "@context":"https://schema.org",
             "@type":"Service",
-            "name":"Insulation Supply & Install",
+            "name":"Insulation Services",
             "provider":{"@type":"LocalBusiness","name":"AHF Insulation"},
             "areaServed":"Melbourne, Australia",
             "serviceType":"Insulation installation, Wall wrap, Removal"

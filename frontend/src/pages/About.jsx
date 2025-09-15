@@ -41,7 +41,7 @@ export default function About() {
         <meta property="og:description" content="Trusted insulation specialists in Melbourne for residential and commercial projects." />
         <meta property="og:url" content="https://www.ahfinsulation.com/about" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.ahfinsulation.com/og/about-hero.jpg" />
+        <meta property="og:image" content="https://www.ahfinsulation.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
@@ -52,7 +52,7 @@ export default function About() {
             "@type":"Organization",
             "name":"AHF Insulation",
             "url":"https://www.ahfinsulation.com/",
-            "logo":"https://www.ahfinsulation.com/og/logo.png",
+            "logo":"https://www.ahfinsulation.com/og-image.jpg",
             "sameAs":[]
           }`}
         </script>
@@ -79,7 +79,7 @@ export default function About() {
 
             <p className="mt-5 text-lg text-white/90">
               Based in <b>Truganina, VIC</b>, we serve homes and businesses
-              across Melbourne with premium supply & install services — from
+              across Melbourne with premium installation and Removal services — from
               wall wrap and insulation batts to safe removal and clean
               upgrades. Our crew focuses on neat finishes, energy savings, and
               long-term performance.
