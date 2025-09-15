@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import SectionDivider from "../components/SectionDivider";
 import { Sun, Volume2, Recycle, Flame, Wrench, ClipboardCheck, Truck, Home } from "lucide-react";
 
@@ -78,6 +79,37 @@ const Services = () => {
   };
 
   return (
+     <>
+      <Helmet>
+        <title> AHF Services | Residential & Commercial | AHF Insulation</title>
+        <meta
+          name="description"
+          content="Wall, ceiling and wrap insulation supply & install across Melbourne. Safe old insulation removal, clean installs, builder-friendly scheduling."
+        />
+        <link rel="canonical" href="https://www.ahfinsulation.com/services" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Insulation Services in Melbourne | AHF Insulation" />
+        <meta property="og:description" content="Professional wall, ceiling and wrap insulation. Residential & commercial projects done right." />
+        <meta property="og:url" content="https://www.ahfinsulation.com/services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.ahfinsulation.com/og/services-hero.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* JSON-LD: Service */}
+        <script type="application/ld+json">
+          {`{
+            "@context":"https://schema.org",
+            "@type":"Service",
+            "name":"Insulation Supply & Install",
+            "provider":{"@type":"LocalBusiness","name":"AHF Insulation"},
+            "areaServed":"Melbourne, Australia",
+            "serviceType":"Insulation installation, Wall wrap, Removal"
+          }`}
+        </script>
+      </Helmet>
+
     <div className="w-full">
       {/* ---------------- HERO SECTION ---------------- */}
       <section className="relative bg-brand-navy text-white py-24 overflow-hidden">
@@ -236,6 +268,7 @@ const Services = () => {
 
       <SectionDivider style="slope" height={100} className="-mt-20 z-20" flip={true} />
     </div>
+    </>
   );
 };
 

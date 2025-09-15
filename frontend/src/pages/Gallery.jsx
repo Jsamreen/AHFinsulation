@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, PlayCircle, X } from "lucide-react";
-
+import { Helmet } from "react-helmet-async";
 
 const MEDIA = [
   // HERO — these appear in the slider
@@ -322,6 +322,37 @@ export default function Gallery() {
   const [active, setActive] = useState(null); // lightbox item
 
   return (
+    <>
+      <Helmet>
+        <title> AHF Gallery | AHF Insulation Melbourne</title>
+        <meta
+          name="description"
+          content="Recent insulation projects across Melbourne: neat installs, clean job sites, quality materials. See the workmanship."
+        />
+        <link rel="canonical" href="https://www.ahfinsulation.com/gallery" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="AHF Insulation — Project Gallery" />
+        <meta property="og:description" content="Browse completed insulation projects in Melbourne." />
+        <meta property="og:url" content="https://www.ahfinsulation.com/gallery" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.ahfinsulation.com/og/gallery-hero.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* JSON-LD: Breadcrumbs (helps Google understand page hierarchy) */}
+        <script type="application/ld+json">
+          {`{
+            "@context":"https://schema.org",
+            "@type":"BreadcrumbList",
+            "itemListElement":[
+              {"@type":"ListItem","position":1,"name":"Home","item":"https://www.ahfinsulation.com/"},
+              {"@type":"ListItem","position":2,"name":"Gallery","item":"https://www.ahfinsulation.com/gallery"}
+            ]
+          }`}
+        </script>
+      </Helmet>
+
     <div className="w-full">
       {/* HERO */}
       <section className="relative overflow-hidden bg-brand-navy text-white">
@@ -405,6 +436,7 @@ export default function Gallery() {
         )}
       </AnimatePresence>
     </div>
+    </>
   );
 }
 

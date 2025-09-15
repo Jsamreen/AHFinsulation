@@ -7,6 +7,7 @@ import { CheckCircle, Shield, Leaf, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Helmet } from "react-helmet-async";
 
 export default function About() {
   const images = [
@@ -26,6 +27,37 @@ export default function About() {
   };
 
   return (
+    <>
+      <Helmet>
+        <title>About AHF Insulation | Melbourne’s Insulation Specialists</title>
+        <meta
+          name="description"
+          content="15+ years experience delivering comfortable, energy-efficient homes and commercial spaces across Melbourne. Meet the team behind AHF Insulation."
+        />
+        <link rel="canonical" href="https://www.ahfinsulation.com/about" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="About AHF Insulation" />
+        <meta property="og:description" content="Trusted insulation specialists in Melbourne for residential and commercial projects." />
+        <meta property="og:url" content="https://www.ahfinsulation.com/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.ahfinsulation.com/og/about-hero.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* JSON-LD: Organization */}
+        <script type="application/ld+json">
+          {`{
+            "@context":"https://schema.org",
+            "@type":"Organization",
+            "name":"AHF Insulation",
+            "url":"https://www.ahfinsulation.com/",
+            "logo":"https://www.ahfinsulation.com/og/logo.png",
+            "sameAs":[]
+          }`}
+        </script>
+      </Helmet>
+
     <div className="w-full">
       {/* ---------- Section 1: Who We Are + Carousel ---------- */}
       <section className="relative bg-brand-navy text-white">
@@ -195,5 +227,6 @@ export default function About() {
         <SectionDivider style="slope" height={120} flip />
       </section>
     </div>
+    </>
   );
 }

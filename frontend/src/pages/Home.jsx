@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SectionDivider from "../components/SectionDivider";
 import { Hammer, Home, Building2, Wrench, ChevronRight, ChevronLeft } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Hero = () => {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -58,6 +59,43 @@ const Hero = () => {
   }, []);
 
   return (
+    <>
+    {/* 🔽 SEO: Home meta */}
+      <Helmet>
+        <title>AHF Insulation | Expert Insulation Services in Melbourne</title>
+        <meta
+          name="description"
+          content="We provide professional insulation services in Melbourne. Improve energy efficiency, reduce bills, and keep your home comfortable. Call 0499 535 298 for a free quote."
+        />
+        <link rel="canonical" href="https://www.ahfinsulation.com/" />
+        <meta property="og:title" content="AHF Insulation | Melbourne Insulation Specialists" />
+        <meta property="og:description" content="Expert wall, ceiling, and wrap insulation across Melbourne." />
+        <meta property="og:url" content="https://www.ahfinsulation.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.ahfinsulation.com/media/gallery/IMG-20250908-WA0079.jpg" />
+
+        <script type="application/ld+json">
+        {`{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "AHF Insulation",
+          "image": "https://www.ahfinsulation.com/og/home-hero.jpg",
+          "url": "https://www.ahfinsulation.com/",
+          "telephone": "+61 499 535 298",
+          "areaServed": "Melbourne, Australia",
+          "priceRange": "$$",
+          "email": "info@ahfinsulation.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Melbourne",
+            "addressRegion": "VIC",
+            "addressCountry": "AU"
+          },
+          "sameAs": []
+        }`}
+        </script>
+
+      </Helmet>
     <div className="relative w-full cursor-default">
       {/* Hero Slider */}
       <div className="h-[90vh] relative">
@@ -299,7 +337,7 @@ const Hero = () => {
 </section>
 <SectionDivider style="slope" height={100} className="-mt-20 z-20" flip={true}/>
     </div>
-
+</>
     
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { Phone, Mail, MapPin, Clock, Send, Building2, ShieldCheck } from "lucide-react";
 
 export default function Contact() {
@@ -83,6 +84,44 @@ export default function Contact() {
 };
    
   return (
+    <>
+      <Helmet>
+        <title>Contact AHF Insulation | Free Quotes in Melbourne</title>
+        <meta
+          name="description"
+          content="Get a free quote for insulation in Melbourne. Call 0499 535 298 or email info@ahfinsulation.com. Fast responses and professional service."
+        />
+        <link rel="canonical" href="https://www.ahfinsulation.com/contact" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Contact AHF Insulation" />
+        <meta property="og:description" content="Call 0499 535 298 or email info@ahfinsulation.com for fast quotes and bookings." />
+        <meta property="og:url" content="https://www.ahfinsulation.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.ahfinsulation.com/og/contact-hero.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* JSON-LD: LocalBusiness (contact details) */}
+        <script type="application/ld+json">
+          {`{
+            "@context":"https://schema.org",
+            "@type":"LocalBusiness",
+            "name":"AHF Insulation",
+            "url":"https://www.ahfinsulation.com/contact",
+            "telephone":"+61 499 535 298",
+            "email":"info@ahfinsulation.com",
+            "areaServed":"Melbourne, Australia",
+            "address":{
+              "@type":"PostalAddress",
+              "addressLocality":"Melbourne",
+              "addressRegion":"VIC",
+              "addressCountry":"AU"
+            }
+          }`}
+        </script>
+      </Helmet>
+
     <div className="w-full">
       {/* HERO */}
       <section className="relative overflow-hidden">
@@ -332,6 +371,7 @@ export default function Contact() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 
