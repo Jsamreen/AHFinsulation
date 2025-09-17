@@ -64,9 +64,11 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="bg-black/30">
         <div className="container-xl py-4 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-400">
+          <p className="text-xs text-gray-500">Designed &amp; Developed by Javeria</p>
+          <p className="text-xs text-gray-400"> 
             © {year} AHF Insulation Pty Ltd. All rights reserved.
           </p>
+          
           <div className="flex items-center gap-3">
             <a href={SOCIAL.facebook}  target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="icon-chip hover:text-brand-blue"><Facebook className="w-4 h-4" /></a>
             <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="icon-chip hover:text-brand-blue"><Instagram className="w-4 h-4" /></a>
