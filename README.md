@@ -77,9 +77,7 @@ frontend/
 
 Hosted on Vercel → https://ahfinsulation.com
 
-Custom domain configured via DNS (GoDaddy/Cloudflare)
-
-Favicon cache-busting (?v=3) added to fix Google favicon indexing
+Custom domain configured via DNS 
 
 Sitemap + SEO optimized for Google Search Console
 
